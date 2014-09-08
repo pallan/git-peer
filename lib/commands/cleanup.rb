@@ -8,6 +8,9 @@ module Commands
 
       delete_flag = options[:force] ? '-D' : '-d'
 
+      put(" * pruning origin")
+      sys("git remote prune origin")
+
       get('git branch -vv').split("\n").each do |raw|
         parts = parse_line(raw)
 
