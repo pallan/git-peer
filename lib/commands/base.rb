@@ -9,12 +9,13 @@ module Commands
     def initialize(input=STDIN, output=STDOUT, *args)
       @input = input
       @output = output
-      @options = {}
+      @options = {dry_run: false}
 
       parse_argv(*args)
     end
 
     def put(string, newline=true)
+      string  += ' [DRY-RUN]' if options[:dry_run]
       @output.print(newline ? string + "\n" : string) unless options[:quiet]
     end
 
