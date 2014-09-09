@@ -1,24 +1,30 @@
-# Git::Peer
+# Git Peer
 
-TODO: Write a gem description
+This is a small gem that adds some custom git commands that are not so
+easy to add as aliases.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'git-peer'
-
-And then execute:
-
+This gem is not published to rubygems.org so you have to build it
+yourself to install it. 
+    $ git clone https://github.com/pallan/git-peer.git
+    $ cd git-peer
     $ bundle
+    $ rake install
 
-Or install it yourself as:
+## Commands
 
-    $ gem install git-peer
+**git cleanup [options]**
 
-## Usage
+Prunes the remote branches from origin and then deletes and local
+branches whose remote tracking branch no longer exists. By default,
+the branch removal is not forced (`-d`), use the `-f` flag to override
+this.
 
-TODO: Write usage instructions here
+
+    -v, --verbose   # verbose
+    -f, --force     # force delete the branches (-D)
+    -w, --dry-run   # show results without deleting
 
 ## Contributing
 
