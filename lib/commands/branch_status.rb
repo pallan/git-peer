@@ -25,7 +25,7 @@ module Commands
 
       put("= Git Branch status\n")
       stats.each do |author, branches|
-        put("\n== #{author}")
+        put("\n== #{author}; Count: #{branches.count}")
         put(branches.join("\n"))
       end
 
