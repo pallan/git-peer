@@ -7,6 +7,7 @@ easy to add as aliases.
 
 This gem is not published to rubygems.org so you have to build it
 yourself to install it. 
+
     $ git clone https://github.com/pallan/git-peer.git
     $ cd git-peer
     $ bundle
